@@ -1,0 +1,24 @@
+{
+    "name": "vratiu/avangate",
+    "description": "",
+    "authors": [
+        {
+            "name": "Virgil Ratiu",
+            "email": "vratiu@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "symfony/event-dispatcher": "2.7-dev"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Vratiu\\Avangate\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
