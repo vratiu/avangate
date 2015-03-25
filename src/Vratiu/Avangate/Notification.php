@@ -76,6 +76,7 @@ class Notification extends EventDispatcher
         }
 
         $hash = hash_hmac($this->hashMethod, $hashSource, $this->getConfig('secret'));
+        var_dump($hash , $requestData[$this->fields->getHashField()]);
 
         return (bool) ($hash === $requestData[$this->fields->getHashField()]);
     }
@@ -122,7 +123,8 @@ class Notification extends EventDispatcher
      */
     protected function getFieldHashSource($field)
     {
-        $hashSource = mb_strlen($field, $this->defaultEncoding) . $field;
+//        $hashSource = mb_strlen($field, $this->defaultEncoding) . $field;
+        $hashSource = strlen($field) . $field;
         return $hashSource;
     }
 
